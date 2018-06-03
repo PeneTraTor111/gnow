@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://code.z01.com/v4/examples/cover/# -->
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Try to find more fun.">
+        <meta name="author" content="">
+        <link rel="icon" href="/static/images/mario_icon.png">
+        <title>G-NOW</title>
+        <!-- Bootstrap 核心CSS -->
+        <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/fontAwesome4.7.0/css/font-awesome.min.css">
+        <style>
+        /* * Globals */
+        /* Links */
+        a, a:focus { color: #333; }
+        /* Custom default button */
+        .btn-secondary,
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            color: #fff; text-shadow: none;
+            /* Prevent inheritance from `body` */
+            background-color: #aaa;
+            border: .05rem solid #aaa;
+        }
+        /* * Base structure */
+        html, body { height: 100%; background-color: #fff; }
+        body { color: #333; text-align: center; text-shadow: 0 .05rem .1rem rgba(0,0,0,.5); }
+        a:hover {text-decoration: none; color: rgba(45, 100, 220, 1);}
+        /* Extra markup and styles for table-esque vertical and horizontal centering */
+        .site-wrapper {
+            display: table;
+            width: 100%; height: 100%;
+            /* For at least Firefox */
+            min-height: 100%;
+            box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+        }
+        .site-wrapper-inner { display: table-cell; vertical-align: top; }
+        .cover-container { margin-right: auto; margin-left: auto; }
+        .carousel-inner img { margin-right: auto; margin-left: auto;}
+        /* Padding for spacing */
+        .inner { padding: 2rem; }
+        /* * Header */
+        .masthead { margin-bottom: 2rem; }
+        .masthead-brand { margin-bottom: 0; }
+        .nav-masthead .nav-link { padding: .25rem 0; font-weight: 700; color: rgba(155,155,155,.5); background-color: transparent; border-bottom: .25rem solid transparent; }
+        .nav-masthead .nav-link:hover, .nav-masthead .nav-link:focus { border-bottom-color: rgba(155,155,155,.25); }
+        .nav-masthead .nav-link + .nav-link { margin-left: 1rem; }
+        .nav-masthead .active { color: #333; border-bottom-color: #333; }
+        .nav-search { margin-left: 5rem ; color: #999; }
+        .svg-search { margin-top: .5rem;}
+        .form-search { padding-left: 2rem;}
+
+        @media (min-width: 48em) {
+        .masthead-brand { float: left; }
+        .nav-masthead { float: right; }
+        }
+        /* * Cover */
+        .cover { padding: 0 0/**1.5rem;*/ }
+        .cover .btn-lg { padding: .75rem 1.25rem; font-weight: 700; }
+        /* * Footer */
+        .mastfoot { color: rgba(55, 55, 55, 0.5); }
+        /* * Affix and center */
+        @media (min-width: 40em) {
+        /* Pull out the header and footer */
+        .masthead { /**position: fixed;*/ top: 0; }
+        .mastfoot { /**position: fixed;*/ bottom: 0; }
+        /* Start the vertical centering */
+        .site-wrapper-inner { vertical-align: middle; }
+        /* Handle the widths */
+        .masthead,  .mastfoot,  .cover-container { width: 100%; /* Must be percentage or pixels for horizontal alignment */ }
+        }
+        @media (min-width: 62em) {
+        .masthead,  .mastfoot,  .cover-container { width: 100%;}
+        }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="site-wrapper">
+          <div class="site-wrapper-inner">
+            <div class="cover-container">
+              <header class="masthead">
+                <div class="inner">
+                  <a href="./"><h3 class="masthead-brand navbar_brand">G-NOW</h3></a>
+                  <nav class="nav nav-masthead">
+                      <a class="nav-link active" href="./">Home</a>
+                      <a class="nav-link" href="./">Features</a>
+                      <a class="nav-link" href="./">Contact</a>
+                      <form class="form-inline mt-2 mt-md-0 nav-search" role="search" method="get" target="_blank">
+                              {% comment %}<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                   fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-search mr-sm-2">
+                                  <circle cx="10.5" cy="10.5" r="7.5" color="#999"></circle>
+                                  <line x1="21" y1="21" x2="15.8" y2="15.8" color="#999"></line>
+                              </svg>{% endcomment %}
+                              <i class="fa fa-search mr-sm-2"></i>
+                              <input type="text" class="form-control mr-sm-2" id="search" placeholder="search">
+
+                      </form>
+                  </nav>
+                </div>
+              </header>
+              <main role="main" class="inner cover">
+                  <!-- 轮播图片 -->
+                  <div id="demo" class="carousel slide " data-ride="carousel">
+
+                      <!-- 指示符 -->
+                      <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                      </ul>
+
+                      <!-- 轮播图片 4000-->
+                      {% comment %}<div class="carousel-inner table-cell">
+                        <div class="carousel-item active">
+                          <img src="https://alioss.g-cores.com/uploads/focus_image/62e8d6b3-6dd4-4e3a-a09c-bb923d3c5f65.jpg" class="img-responsive img-fluid">
+                        </div>
+                        <div class="carousel-item ">
+                          <img src="https://alioss.g-cores.com/uploads/focus_image/1ec672ee-bb8e-49f0-99d8-c860f98173d1.jpg" class="img-responsive img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://alioss.g-cores.com/uploads/focus_image/a6592a1c-9ab3-4157-9692-2d58aa90690d.jpg" class="img-responsive img-fluid">
+                        </div>
+                      </div>{% endcomment %}
+
+                      <!-- 轮播图片 1600-->
+                      <div class="carousel-inner table-cell">
+                        <div class="carousel-item active">
+                          <img src="https://alioss.g-cores.com/uploads/focus_image/eae76f37-e6bf-4861-8db5-31e22e6a4bc8.jpg" class="img-responsive img-fluid">
+                        </div>
+                        <div class="carousel-item ">
+                          <img src="https://alioss.g-cores.com/uploads/focus_image/198f61ef-c115-4c29-9666-eaba66b80263.jpg" class="img-responsive img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://alioss.g-cores.com/uploads/focus_image/b1853ace-437b-4f3a-b7b6-013058feab01.jpg" class="img-responsive img-fluid">
+                        </div>
+                      </div>
+
+                      <!-- 左右切换按钮 -->
+                      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      </a>
+                      <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" ></span>
+                      </a>
+
+                </div>
+                  <h1 class="cover-heading">G-NOW</h1>
+                  <p class="lead">Try to find more fun.</p>
+                  <p class="lead">
+                    <a href="./result"
+                       class="btn btn-lg btn-secondary">Go to Nintendo</a>
+                  </p>
+              </main>
+              <footer class="mastfoot">
+                <div class="inner">
+                  <p>Lowest Price of
+                      <a href="https://www.nintendo.com/">Nintendo e-shop</a>,
+                      by <a href="https://www.nintendo.com/">@mdo</a>.
+                  </p>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Bootstrap 核心 JavaScript -->
+        <script src="/static/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="/static/js/popper.min.js"></script>
+        <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
