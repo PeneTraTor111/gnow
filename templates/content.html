@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Try to find more fun.">
+        <meta name="author" content="">
+        <link rel="icon" href="/static/images/mario_icon.png">
+        <title>G-NOW</title>
+        <!-- Bootstrap 核心CSS -->
+        <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/fontAwesome4.7.0/css/font-awesome.min.css">
+
+        <style>
+        /* * Globals */
+        /* Links */
+
+        a, a:focus { color: #333; }
+        /* Custom default button */
+        .btn-secondary,
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            color: #fff; text-shadow: none;
+            /* Prevent inheritance from `body` */
+            background-color: #aaa;
+            border: .05rem solid #aaa;
+        }
+        /* * Base structure */
+        html, body { height: 100%; background-color: #fff; }
+        body { color: #333; text-align: center; text-shadow: 0 .05rem .1rem rgba(0,0,0,.5); }
+        a:hover {text-decoration: none; color: rgba(45, 100, 220, 1);}
+        /* Extra markup and styles for table-esque vertical and horizontal centering */
+        .site-wrapper {
+            display: table;
+            width: 100%; height: 100%;
+            /* For at least Firefox */
+            min-height: 100%;
+            box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+        }
+        .site-wrapper-inner { display: table-cell; vertical-align: top; }
+        .cover-container { margin-right: auto; margin-left: auto; }
+        .game-main { width: 100%; padding: 100px 20px 0 70px; float: left;}
+        .game_box.main { max-width: 55%; width: 100%; float: left;}
+        .game_info_box { width: 100%; float: left; }
+        .game-card { margin-right: auto; margin-left: auto;}
+        .carousel-inner img { margin-right: auto; margin-left: auto;}
+        /* Padding for spacing */
+        .inner { padding: 2rem; }
+        /* * Header */
+        .masthead { margin-bottom: 2rem; }
+        .masthead-brand { margin-bottom: 0; }
+        .nav-masthead .nav-link { padding: .25rem 0; font-weight: 700; color: rgba(155,155,155,.5); background-color: transparent; border-bottom: .25rem solid transparent; }
+        .nav-masthead .nav-link:hover, .nav-masthead .nav-link:focus { border-bottom-color: rgba(155,155,155,.25); }
+        .nav-masthead .nav-link + .nav-link { margin-left: 1rem; }
+        .nav-masthead .active { color: #333; border-bottom-color: #333; }
+        .nav-search { margin-left: 5rem ; color: #999; }
+        .card-label { text-align: left; font-size: medium; }
+        .card-content { padding-left: .75rem;color: #000;font-size: medium; }
+        .price { float: right; font-size: medium; padding-left: 10rem; color: #FF0000;}
+        .price-local { float: right; font-size: small; padding-left: .5rem; color: #999; }
+
+
+        @media (min-width: 48em) {
+        .masthead-brand { float: left; }
+        .nav-masthead { float: right; }
+        }
+        @media (max-width: 48em) {
+            .game_box.main {max-width: 100%; padding-left: 1rem; padding-right: 1rem;}
+            .right { max-width:100%; float: left; padding-left: 1rem;}
+            .price_box { padding-left: 2rem; }
+        }
+        @media (max-width: 60em) {
+            .game_box.main {max-width: 75%;}
+            .right { max-width:100%; float: left;  padding-top: 1rem;}
+            .price_box { padding-left: 2rem;  padding-top: 1rem;}
+        }
+        /* * Cover */
+        .cover .btn-lg { padding: .75rem 1.25rem; font-weight: 700; }
+        /* * Footer */
+        .mastfoot { color: rgba(55, 55, 55, 0.5); }
+        /* * Affix and center */
+        @media (min-width: 40em) {
+        /* Pull out the header and footer */
+        .masthead {  top: 0; }
+        .mastfoot {  bottom: 0; }
+        /* Start the vertical centering */
+        .site-wrapper-inner { vertical-align: middle; }
+        /* Handle the widths */
+        .masthead,  .mastfoot,  .cover-container, .game-card { width: 100%; /* Must be percentage or pixels for horizontal alignment */ }
+        }
+        @media (min-width: 62em) {
+        .masthead,  .mastfoot,  .cover-container { width: 100%;}
+        .game-card {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .main{ margin-left: 5rem;}
+        .right { float: left; margin-left: 5rem;}
+        .price_box { margin-left: 5rem; margin-top: 1rem;}
+        }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="site-wrapper">
+          <div class="site-wrapper-inner">
+            <div class="cover-container">
+              <header class="masthead">
+                <div class="inner">
+                  <a href="../"><h3 class="masthead-brand navbar_brand">G-NOW</h3></a>
+                  <nav class="nav nav-masthead">
+                      <a class="nav-link" href="../">Home</a>
+                      <a class="nav-link active" href="./">Features</a>
+                      <a class="nav-link" href="./">Contact</a>
+                      <form class="form-inline mt-2 mt-md-0 nav-search" role="search" method="get" target="_blank">
+                              {% comment %}<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                   fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-search mr-sm-2">
+                                  <circle cx="10.5" cy="10.5" r="7.5" color="#999"></circle>
+                                  <line x1="21" y1="21" x2="15.8" y2="15.8" color="#999"></line>
+                              </svg>{% endcomment %}
+                              <i class="fa fa-search mr-sm-2"></i>
+                              <input type="text" class="form-control mr-sm-2" id="search" placeholder="search">
+
+                      </form>
+                  </nav>
+                </div>
+              </header>
+              <main role="main" class="inner game-main">
+                  <div class="game_box main">
+                      <h4 style="padding-top: 2rem;text-align: left">塞尔达传说：旷野之息</h4>
+                      <h5 style="padding-bottom: 1rem;color: #999;text-align: left">The Legend of Zelda：Breath of the Wild</h5>
+                  </div>
+                  <div class="game_box main">
+                      <div id="demo" class="carousel slide " data-ride="carousel">
+                              <!-- 指示符 -->
+                              <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                              </ul>
+                              <!-- 轮播图片 1600-->
+                              <div class="carousel-inner table-cell">
+                                <div class="carousel-item active">
+                                  <img src="http://img01.vgtime.com/photo/web/16061617105615.jpg?x-oss-process=image/resize,m_pad,color_000000,w_1050,h_660" class="img-responsive img-fluid rounded">
+                                </div>
+                                <div class="carousel-item ">
+                                  <img src="http://img01.vgtime.com/photo/web/160616171108133.jpg?x-oss-process=image/resize,m_pad,color_000000,w_1050,h_660" class="img-responsive img-fluid rounded">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="http://img01.vgtime.com/photo/web/16061617111982.jpg?x-oss-process=image/resize,m_pad,color_000000,w_1050,h_660" class="img-responsive img-fluid rounded">
+                                </div>
+                              </div>
+
+                              <!-- 左右切换按钮 -->
+                              <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              </a>
+                              <a class="carousel-control-next" href="#demo" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true" ></span>
+                              </a>
+                          </div>
+                      <h4 style="padding-top: 2rem;text-align: left;font-weight: bold">关于游戏</h4>
+                      <p class="lead" style="padding-top: 1rem; color: #000;text-align: left; font-size: medium">
+                          {{ data }}</p>
+                  </div>
+                  <div class="game_box right">
+                      <div class="game_info_box">
+                          <img class="img-responsive img-fluid rounded" src="http://img01.vgtime.com/game/cover/2017/01/13/17011315401782.png?x-oss-process=image/resize,m_lfit,w_300" style="padding-bottom: 1rem;">
+                          <div class="text-muted">
+                              <h2 class="mb-3" style="text-align: left; color: #000;">￥384.97<span class="card-content" style="color: #777;">美国</span></h2>
+                              <p class="card-label">平台<span class="badge badge-default badge-pill card-content">Switch</span><span class="badge badge-default badge-pill card-content">Wiiu</span><p/>
+                              <p class="card-label">最早发售<span class="card-content">2017-03-03</span></p>
+                              <p class="card-label">中文版本<span class="card-content">2018-02-01</span></p>
+                              <p class="card-label">开发商<span class="card-content">Nintendo</span></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="game_box right price_box" >
+                      <div class="game_info_box">
+                          <div class="text-muted">
+                              <a href="#more-price" data-toggle="collapse"><h3 class="mb-3" style="text-align: left; color: #000;"><i class="fa fa-credit-card-alt" aria-hidden="true" style="padding-right: 1rem"></i>价格排行</h3></a>
+                              <p class="card-label">美国<span><a href="" data-toggle="tooltip" title="USD 59.99"><span class="price">￥384.97</span></a></span></p>
+                              <p class="card-label">加拿大<span class="price" data-toggle="tooltip" title="USD 59.99">￥415.36</span></p>
+                              <p class="card-label">南非<span class="price">￥441.88</span></p>
+                              <div id="more-price" class="collapse">
+                                  <p class="card-label">日本<span class="price">￥441.88</span></p>
+                                  <p class="card-label">日本<span class="price">￥441.88</span></p>
+                                  <p class="card-label">日本<span class="price">￥441.88</span></p>
+                                  <p class="card-label">日本<span class="price">￥441.88</span></p>
+                                  <p class="card-label">日本<span class="price">￥441.88</span></p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </main>
+              <footer class="mastfoot">
+                <div class="inner">
+                  <p>Lowest Price of
+                      <a href="https://www.nintendo.com/">Nintendo e-shop</a>,
+                      by <a href="https://www.nintendo.com/">@mdo</a>.
+                  </p>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Bootstrap 核心 JavaScript -->
+        <script src="/static/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="/static/js/popper.min.js"></script>
+        <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
