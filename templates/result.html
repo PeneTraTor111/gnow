@@ -29,7 +29,7 @@
         /* * Base structure */
         html, body { height: 100%; background-color: #fff; }
         body { color: #333; text-align: center; text-shadow: 0 .05rem .1rem rgba(0,0,0,.5); }
-        a:hover {text-decoration: none; color: rgba(45, 100, 220, 1);}
+        a:hover {text-decoration: none; /**color: rgba(45, 100, 220, 1);*/ color: #fff;}
         /* Extra markup and styles for table-esque vertical and horizontal centering */
         .site-wrapper {
             display: table;
@@ -41,7 +41,7 @@
         .site-wrapper-inner { display: table-cell; vertical-align: top; }
         .cover-container { margin-right: auto; margin-left: auto; }
         .main-container { margin-right: auto; margin-left: auto; }
-        .game-card { margin-right: auto; margin-left: auto;}
+        .game-card { margin-right: auto; margin-left: auto; background-color: rgba(48, 114, 255, 0.15);}
         .carousel-inner img { margin-right: auto; margin-left: auto;}
         /* Padding for spacing */
         .inner { padding: 2rem; }
@@ -53,9 +53,12 @@
         .nav-masthead .nav-link + .nav-link { margin-left: 1rem; }
         .nav-masthead .active { color: #333; border-bottom-color: #333; }
         .nav-search { margin-left: 5rem ; color: #999; }
-        .cover-img { width: 25%; height: 25%; padding-left: .5rem; padding-top: .5rem;}
+
+        .cover-img { width: 25%; height: 25%; padding-left: .5rem; padding-top: 1rem;}
         .card-label { text-align: left; font-size: small; }
         .card-content { padding-left: .75rem;color: #000;font-size: medium; }
+        .logo {  max-width: 40%; max-height: 40%; padding-left: .5rem}
+
 
 
         @media (min-width: 48em) {
@@ -119,42 +122,43 @@
                 </div>
               </header>
               <main role="main" class="main-container inner">
-                  <h2 class="cover-heading" style="padding-top: 3rem;text-align: left">塞尔达传说</h2>
+                  <h2 class="cover-heading" style="padding-top: 2rem;text-align: left">塞尔达传说</h2>
                   <h5 class="cover-heading" style="padding-top: .5rem; padding-bottom: 1rem;color: #999;text-align: left">共2个搜索结果</h5>
                   <div class="game-card">
                       <div class="card flex-md-row mb-4 box-shadow h-md-250">
                           <a class="cover-img" href="../result/content" target="_blank"><img class="card-img" src="http://img01.vgtime.com/game/cover/2017/01/13/170113163253207.jpg"></a>
                           <div class="card-body d-flex flex-column align-items-start">
-                              <h5 class="d-inline-block mb-0" ><a href="../result/content">塞尔达传说：旷野之息</a></h5>
-                              <h6 class="d-inline-block mb-0">The Legend of Zelda：Breath of the Wild</h6>
+                              <h5 class="mb-0"><a href="../result/content">塞尔达传说：旷野之息</a></h5>
+                              <h6 class="mb-0">The Legend of Zelda：Breath of the Wild</h6>
                               <div class="mb-1 text-muted" style="padding-top: 1rem">
                                   <p class="card-label">平台<span class="badge badge-default badge-pill card-content">Switch</span><span class="badge badge-default badge-pill card-content">Wiiu</span><p/>
                                   <p class="card-label">最早发售<span class="card-content">2017-03-03</span></p>
                                   <p class="card-label">中文版本<span class="card-content">2018-02-01</span></p>
                                   <p class="card-label">开发商<span class="card-content">Nintendo</span></p>
+                                  <p class="card-label">评分<span class="card-content">97</span><span class="card-content">by<span><img class="logo" src="/static/images/metacritic_logo.png"></span></span></p>
                               </div>
                               <h6 class="mb-1 text-muted card-label">最低价格<span class="card-content">￥384.97</span><span class="card-content">美国</span><span class="card-content">（USD 59.99）</span></h6>
-                              <a href="../result/content"><h6 class="mb-0" style="padding-top: .5rem">Reading more</h6></a>
                           </div>
                       </div>
                   </div>
                   <div class="game-card">
                       <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                          <a class="cover-img" href="../result" target="_blank"><img class="card-img" src="http://img01.vgtime.com/game/cover/2017/01/13/170113163253207.jpg"></a>
+                          <a class="cover-img" href="../result/content" target="_blank"><img class="card-img" src="http://img01.vgtime.com/game/cover/2017/01/13/170113163253207.jpg"></a>
                           <div class="card-body d-flex flex-column align-items-start">
-                              <h5 class="d-inline-block mb-0" ><a href="../result">塞尔达传说：旷野之息</a></h5>
-                              <h6 class="d-inline-block mb-0">The Legend of Zelda：Breath of the Wild</h6>
+                              <h5 class="mb-0"><a href="../result/content">塞尔达传说：旷野之息</a></h5>
+                              <h6 class="mb-0">The Legend of Zelda：Breath of the Wild</h6>
                               <div class="mb-1 text-muted" style="padding-top: 1rem">
                                   <p class="card-label">平台<span class="badge badge-default badge-pill card-content">Switch</span><span class="badge badge-default badge-pill card-content">Wiiu</span><p/>
                                   <p class="card-label">最早发售<span class="card-content">2017-03-03</span></p>
                                   <p class="card-label">中文版本<span class="card-content">2018-02-01</span></p>
                                   <p class="card-label">开发商<span class="card-content">Nintendo</span></p>
+                                  <p class="card-label">评分<span class="card-content">97</span><span class="card-content">by<span><img class="logo" src="/static/images/metacritic_logo.png"></span></span></p>
                               </div>
                               <h6 class="mb-1 text-muted card-label">最低价格<span class="card-content">￥384.97</span><span class="card-content">美国</span><span class="card-content">（USD 59.99）</span></h6>
-                              <a href="../result"><h6 class="mb-0" style="padding-top: .5rem">Reading more</h6></a>
                           </div>
                       </div>
                   </div>
+
                   <h1 class="cover-heading">G-NOW</h1>
                   <p class="lead">Try to find more fun.</p>
                   <p class="lead">
@@ -172,8 +176,8 @@
                     </div>
                     <h6 style="padding-top: 1rem">Contact us</h6>
                     <a href="https://www.nintendo.com/"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
-                    <p style="padding-top: 1rem; font-size: medium">Lowest Price of
-                      <a href="https://www.nintendo.com/">Nintendo e-shop</a>.</p>
+                    <h6 style="padding-top: 1rem; font-size: medium">Lowest Price of
+                      <a href="https://www.nintendo.com/">Nintendo e-shop</a>.</h6>
                 </div>
               </footer>
             </div>

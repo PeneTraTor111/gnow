@@ -29,7 +29,7 @@
         /* * Base structure */
         html, body { height: 100%; background-color: #fff; }
         body { color: #333; text-align: center; text-shadow: 0 .05rem .1rem rgba(0,0,0,.5); }
-        a:hover {text-decoration: none; color: rgba(45, 100, 220, 1);}
+        a:hover {text-decoration: none; color: #fff;}
         /* Extra markup and styles for table-esque vertical and horizontal centering */
         .site-wrapper {
             display: table;
@@ -59,6 +59,7 @@
         .card-content { padding-left: .75rem;color: #000;font-size: medium; }
         .price { float: right; font-size: medium; padding-left: 10rem; color: #FF0000;}
         .price-local { float: right; font-size: small; padding-left: .5rem; color: #999; }
+        .logo { padding-left: 1rem; max-width: 40%; max-height: 40%}
 
 
         @media (min-width: 48em) {
@@ -174,7 +175,7 @@
                       <div class="game_info_box">
                           <img class="img-responsive img-fluid rounded" src="http://img01.vgtime.com/game/cover/2017/01/13/17011315401782.png?x-oss-process=image/resize,m_lfit,w_300" style="padding-bottom: 1rem;">
                           <div class="text-muted">
-                              <h2 class="mb-3" style="text-align: left; color: #000;">￥384.97<span class="card-content" style="color: #777;">美国</span></h2>
+                              <h2 class="mb-3" style="text-align: left; color: #000;">97<span class="card-content">by<img class="logo" src="/static/images/metacritic_logo.png"></span></h2>
                               <p class="card-label">平台<span class="badge badge-default badge-pill card-content">Switch</span><span class="badge badge-default badge-pill card-content">Wiiu</span><p/>
                               <p class="card-label">最早发售<span class="card-content">2017-03-03</span></p>
                               <p class="card-label">中文版本<span class="card-content">2018-02-01</span></p>
@@ -182,11 +183,11 @@
                           </div>
                       </div>
                   </div>
-                  <div class="game_box right price_box" >
+                  <div class="game_box right price_box">
                       <div class="game_info_box">
                           <div class="text-muted">
                               <a href="#more-price" data-toggle="collapse"><h3 class="mb-3" style="text-align: left; color: #000;"><i class="fa fa-credit-card-alt" aria-hidden="true" style="padding-right: 1rem"></i>价格排行</h3></a>
-                              <p class="card-label">美国<span><a href="" class="price" data-toggle="tooltip" data-placement="right" title="USD 59.99">￥384.97</a></span></p>
+                              <p class="card-label">美国<span class="price" data-toggle="tooltip" data-placement="right" title="USD 59.99">￥384.97</span></p>
                               <p class="card-label">加拿大<span class="price" data-toggle="tooltip" data-placement="right" title="USD 59.99" >￥415.36</span></p>
                               <p class="card-label">南非<span class="price">￥441.88</span></p>
                               <div id="more-price" class="collapse">
@@ -210,8 +211,8 @@
                     </div>
                     <h6 style="padding-top: 1rem">Contact us</h6>
                     <a href="https://www.nintendo.com/"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
-                    <p style="padding-top: 1rem; font-size: medium">Lowest Price of
-                      <a href="https://www.nintendo.com/">Nintendo e-shop</a>.</p>
+                    <h6 style="padding-top: 1rem; font-size: medium">The lowest Price of
+                      <a href="https://www.nintendo.com/">Nintendo e-shop</a>.</h6>
                 </div>
               </footer>
             </div>
