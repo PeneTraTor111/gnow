@@ -11,8 +11,12 @@
         <!-- Bootstrap 核心CSS -->
         <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/static/fontAwesome4.7.0/css/font-awesome.min.css">
+        <link href="./Dashboard Template for Bootstrap_files/dashboard.css" rel="stylesheet">
 
-        <style>
+        <style type="text/css">
+            @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}
+            @keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}
+            .chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
         /* * Globals */
         /* Links */
 
@@ -43,7 +47,6 @@
         .game-main { width: 100%; padding: 100px 20px 0 70px; float: left;}
         .game_box.main { max-width: 55%; width: 100%; float: left;}
         .game_info_box { width: 100%; float: left; }
-        .game-card { margin-right: auto; margin-left: auto;}
         .carousel-inner img { margin-right: auto; margin-left: auto;}
         /* Padding for spacing */
         .inner { padding: 2rem; }
@@ -60,6 +63,7 @@
         .price { float: right; font-size: medium; padding-left: 10rem; color: #FF0000;}
         .price-local { float: right; font-size: small; padding-left: .5rem; color: #999; }
         .logo { padding-left: 1rem; max-width: 40%; max-height: 40%}
+        .chart-style { display: block; width: 30rem; height: 15rem; margin-top: 2rem; margin-bottom: 3rem }
 
 
         @media (min-width: 48em) {
@@ -77,9 +81,9 @@
             .price_box { padding-left: 2rem;  padding-top: 1rem;}
         }
         /* * Cover */
-        .cover .btn-lg { padding: .75rem 1.25rem; font-weight: 700; }
+        .cover { padding: .75rem 1.25rem; font-weight: 700; }
         /* * Footer */
-        .mastfoot { text-align: center; color: #fff; background: #717071; clear: both; }
+        .mastfoot { text-align: center; color: #fff; background: #717071; margin-top: 3rem; clear: both;}
         /* * Affix and center */
         @media (min-width: 40em) {
         /* Pull out the header and footer */
@@ -92,14 +96,7 @@
         }
         @media (min-width: 62em) {
         .masthead,  .mastfoot,  .cover-container { width: 100%;}
-        .game-card {
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-            max-width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
+
         .main{ margin-left: 5rem;}
         .right { float: left; margin-left: 5rem;}
         .price_box { margin-left: 5rem; margin-top: 1rem;}
@@ -167,9 +164,12 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true" ></span>
                               </a>
                           </div>
+
                       <h4 style="padding-top: 2rem;text-align: left;font-weight: bold">关于游戏</h4>
-                      <p class="lead" style="padding-top: 1rem; color: #000;text-align: justify; font-size: medium">
-                          {{ data }}</p>
+                      <p class="lead" style="padding-top: 1rem; color: #000;text-align: justify; font-size: medium">{{ data }}</p>
+
+                      <h4 style="padding-top: 1rem;text-align: left;font-weight: bold">近期价格</h4>
+                      <canvas class="chartjs-render-monitor chart-style" id="myChart" width="30rem" height="15rem"></canvas>
                   </div>
                   <div class="game_box right">
                       <div class="game_info_box">
@@ -186,7 +186,7 @@
                   <div class="game_box right price_box">
                       <div class="game_info_box">
                           <div class="text-muted">
-                              <a href="#more-price" data-toggle="collapse"><h3 class="mb-3" style="text-align: left; color: #000;"><i class="fa fa-credit-card-alt" aria-hidden="true" style="padding-right: 1rem"></i>价格排行</h3></a>
+                              <a href="#more-price" data-toggle="collapse"><h3 class="mb-3 text-left"><i class="fa fa-credit-card-alt" aria-hidden="true" style="padding-right: 1rem"></i>价格排行</h3></a>
                               <p class="card-label">美国<span class="price" data-toggle="tooltip" data-placement="right" title="USD 59.99">￥384.97</span></p>
                               <p class="card-label">加拿大<span class="price" data-toggle="tooltip" data-placement="right" title="USD 59.99" >￥415.36</span></p>
                               <p class="card-label">南非<span class="price">￥441.88</span></p>
@@ -222,12 +222,44 @@
 
         <!-- Bootstrap 核心 JavaScript -->
         <script src="/static/js/jquery-3.3.1.slim.min.js"></script>
+        <script>window.jQuery || document.write('<script src="./static/js/jquery-3.3.1.slim.min.js"><\/script>')</script>
         <script src="/static/js/popper.min.js"></script>
         <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 
         <script>
             $(function () { $("[data-toggle='tooltip']").tooltip(); });
         </script>
+
+        <script src="https://cdn.bootcss.com/Chart.js/2.7.2/Chart.min.js"></script>
+        <script>
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          datasets: [{
+            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+            lineTension: 0,
+            backgroundColor: 'transparent',
+            borderColor: '#007bff',
+            borderWidth: 4,
+            pointBackgroundColor: '#007bff'
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: false,
+          }
+        }
+      });
+    </script>
 
     </body>
 </html>
