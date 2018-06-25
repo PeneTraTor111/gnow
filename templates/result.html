@@ -108,23 +108,24 @@
                       <a class="nav-link" href="../">Home</a>
                       <a class="nav-link active" href="./">Features</a>
                       <a class="nav-link" href="./">Contact</a>
-                      <form class="form-inline mt-2 mt-md-0 nav-search" role="search" method="get" target="_blank">
+                      <form class="form-inline mt-2 mt-md-0 nav-search" role="search" method="get" target="_blank" action="../search/">
                               {% comment %}<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-search mr-sm-2">
                                   <circle cx="10.5" cy="10.5" r="7.5" color="#999"></circle>
                                   <line x1="21" y1="21" x2="15.8" y2="15.8" color="#999"></line>
                               </svg>{% endcomment %}
                               <i class="fa fa-search mr-sm-2"></i>
-                              <input type="text" class="form-control mr-sm-2" id="search" placeholder="search">
-
+                              <input type="text" class="form-control mr-sm-2" id="search" placeholder="search" name="search">
                       </form>
                   </nav>
                 </div>
               </header>
               <main role="main" class="main-container inner">
                   <h2 class="cover-heading" style="padding-top: 2rem;text-align: left">塞尔达传说</h2>
-                  <h5 class="cover-heading" style="padding-top: .5rem; padding-bottom: 1rem;color: #999;text-align: left">共2个搜索结果</h5>
-                  <div class="game-card">
+                  <h5 class="cover-heading" style="padding-top: .5rem; padding-bottom: 1rem;color: #999;text-align: left">共<span>{{ count }}</span>个搜索结果</h5>
+
+                  {% for i in lis %}
+                    <div class="game-card">
                       <div class="card flex-md-row mb-4 box-shadow h-md-250">
                           <a class="cover-img" href="../result/content" target="_blank"><img class="card-img" src="http://img01.vgtime.com/game/cover/2017/01/13/170113163253207.jpg"></a>
                           <div class="card-body d-flex flex-column align-items-start">
@@ -141,23 +142,7 @@
                           </div>
                       </div>
                   </div>
-                  <div class="game-card">
-                      <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                          <a class="cover-img" href="../result/content" target="_blank"><img class="card-img" src="http://img01.vgtime.com/game/cover/2017/01/13/170113163253207.jpg"></a>
-                          <div class="card-body d-flex flex-column align-items-start">
-                              <h5 class="mb-0"><a href="../result/content">塞尔达传说：旷野之息</a></h5>
-                              <h6 class="mb-0">The Legend of Zelda：Breath of the Wild</h6>
-                              <div class="mb-1 text-muted" style="padding-top: 1rem">
-                                  <p class="card-label">平台<span class="badge badge-default badge-pill card-content">Switch</span><span class="badge badge-default badge-pill card-content">Wiiu</span><p/>
-                                  <p class="card-label">最早发售<span class="card-content">2017-03-03</span></p>
-                                  <p class="card-label">中文版本<span class="card-content">2018-02-01</span></p>
-                                  <p class="card-label">开发商<span class="card-content">Nintendo</span></p>
-                                  <p class="card-label">评分<span class="card-content">97</span><span class="card-content">by<span><img class="logo" src="/static/images/metacritic_logo.png"></span></span></p>
-                              </div>
-                              <h6 class="mb-1 text-muted card-label">最低价格<span class="card-content">￥384.97</span><span class="card-content">美国</span><span class="card-content">（USD 59.99）</span></h6>
-                          </div>
-                      </div>
-                  </div>
+                  {% endfor %}
 
                   <h1 class="cover-heading">G-NOW</h1>
                   <p class="lead">Try to find more fun.</p>
@@ -183,7 +168,6 @@
             </div>
           </div>
         </div>
-
 
         <!-- Bootstrap 核心 JavaScript -->
         <script src="/static/js/jquery-3.3.1.slim.min.js"></script>
