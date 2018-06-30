@@ -124,13 +124,13 @@
                   <h2 class="cover-heading" style="padding-top: 2rem;text-align: left">塞尔达传说</h2>
                   <h5 class="cover-heading" style="padding-top: .5rem; padding-bottom: 1rem;color: #999;text-align: left">共<span>{{ count }}</span>个搜索结果</h5>
 
-                  {% for i in lis %}
+                  {% for game in gameInfo %}
                     <div class="game-card">
                       <div class="card flex-md-row mb-4 box-shadow h-md-250">
                           <a class="cover-img" href="../result/content" target="_blank"><img class="card-img" src="http://img01.vgtime.com/game/cover/2017/01/13/170113163253207.jpg"></a>
                           <div class="card-body d-flex flex-column align-items-start">
                               <h5 class="mb-0"><a href="../result/content">塞尔达传说：旷野之息</a></h5>
-                              <h6 class="mb-0">The Legend of Zelda：Breath of the Wild</h6>
+                              <h6 class="mb-0">{{ game.name }}</h6>
                               <div class="mb-1 text-muted" style="padding-top: 1rem">
                                   <p class="card-label">平台<span class="badge badge-default badge-pill card-content">Switch</span><span class="badge badge-default badge-pill card-content">Wiiu</span><p/>
                                   <p class="card-label">最早发售<span class="card-content">2017-03-03</span></p>
@@ -138,7 +138,7 @@
                                   <p class="card-label">开发商<span class="card-content">Nintendo</span></p>
                                   <p class="card-label">评分<span class="card-content">97</span><span class="card-content">by<span><img class="logo" src="/static/images/metacritic_logo.png"></span></span></p>
                               </div>
-                              <h6 class="mb-1 text-muted card-label">最低价格<span class="card-content">￥384.97</span><span class="card-content">美国</span><span class="card-content">（USD 59.99）</span></h6>
+                              <h6 class="mb-1 text-muted card-label">最低价格<span class="card-content">{{ game.bestPrice }}</span><span class="card-content">美国</span><span class="card-content">（USD 59.99）</span></h6>
                           </div>
                       </div>
                   </div>

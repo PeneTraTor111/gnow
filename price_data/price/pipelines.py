@@ -13,7 +13,7 @@ class PricePipeline(object):
 
 class PriceSqlitePipeline(object):
 
-    PATH_TO_DB = "price.db"
+    PATH_TO_DB = "../price.db"
 
     def __init__(self):
         self.connection = sqlite3.connect(self.PATH_TO_DB)

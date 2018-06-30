@@ -5,7 +5,7 @@ class PriceSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            'https://eshop-prices.com/prices'
+            'https://eshop-prices.com/prices?currency=CNY'
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
