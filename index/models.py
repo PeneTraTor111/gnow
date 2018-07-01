@@ -11,3 +11,10 @@ class gameInfo(models.Model):
     devCompany = models.CharField(max_length=30)
     grade = models.IntegerField()
 
+class gRadio(models.Model):
+    head = models.CharField(max_length=50)
+    time = models.DateField()
+    href = models.URLField()
+    imgSrc = models.URLField()
+    imgTitle = models.CharField(max_length=50)
+    describe = models.CharField(max_length=500)

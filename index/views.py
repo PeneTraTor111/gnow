@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
 import sqlite3
-from index.models import gameInfo
+from index.models import gameInfo,gRadio
 # Create your views here.
 
 def index(request):
-    return render(request, "myindex.html",{'gameInfo': gameInfo})
+    updateGradio()
+    return render(request, "myindex.html",{'gameInfo': gameInfo, 'radio':gRadio})
 
 def result(request):
     updateGameInfo()
@@ -41,5 +42,23 @@ def updateGameInfo():
             bestprice = bestprice if bestprice > i else i
         gameinfo = gameInfo(name=name, description='',bestPrice=bestprice,bestPriceCounty='')
         gameinfo.save()
+    cursor.close()
+    conn.close()
+
+def updateGradio():
+    PATH_TO_DB = "../price.db"
+    conn = sqlite3.connect(PATH_TO_DB)
+    cursor = conn.cursor()
+    cursor.execute('select * from radio')
+    result = cursor.fetchall()
+    for radio in result:
+        head = radio[0]
+        time = radio[1]
+        href = radio[2]
+        imgSrc = radio[3]
+        imgTitle = radio[4]
+        describe = radio[5]
+        gradio = gRadio(head=head,time=time,href=href,imgSrc=imgSrc,imgTitle=imgTitle,describe=describe)
+        gradio.save()
     cursor.close()
     conn.close()
