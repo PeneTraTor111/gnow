@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="68e306a1-0093-4079-acda-fb156a5aa187" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Dashboard Template for Bootstrap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Dashboard Template for Bootstrap_files/Chart.min.js.下载" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Dashboard Template for Bootstrap_files/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Dashboard Template for Bootstrap_files/bootstrap.min.js.下载" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Dashboard Template for Bootstrap_files/dashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Dashboard Template for Bootstrap_files/feather.min.js.下载" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Dashboard Template for Bootstrap_files/jquery-3.2.1.slim.min.js.下载" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Dashboard Template for Bootstrap_files/popper.min.js.下载" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/myindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/myindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,20 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="result.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="result.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="153" column="34" lean-forward="true" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
+            <state relative-caret-position="479">
+              <caret line="177" column="8" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="content.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/content.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="245" column="43" selection-start-line="245" selection-start-column="43" selection-end-line="245" selection-end-column="43" />
+            <state relative-caret-position="473">
+              <caret line="264" column="7" lean-forward="true" selection-start-line="264" selection-start-column="7" selection-end-line="264" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -69,8 +59,8 @@
       <file leaf-file-name="myindex.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/myindex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4263">
-              <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+            <state relative-caret-position="473">
+              <caret line="360" column="7" lean-forward="true" selection-start-line="360" selection-start-column="7" selection-end-line="360" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -107,9 +97,9 @@
         <option value="$PROJECT_DIR$/templates/Dashboard Template for Bootstrap.html" />
         <option value="$PROJECT_DIR$/mysite/urls.py" />
         <option value="$PROJECT_DIR$/index/views.py" />
-        <option value="$PROJECT_DIR$/templates/result.html" />
         <option value="$PROJECT_DIR$/templates/myindex.html" />
         <option value="$PROJECT_DIR$/templates/content.html" />
+        <option value="$PROJECT_DIR$/templates/result.html" />
       </list>
     </option>
   </component>
@@ -136,7 +126,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,6 +157,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,9 +230,9 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32868218" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.23100775" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.23100775" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32817337" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16490166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16717096" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -298,13 +288,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="77" column="76" selection-start-line="77" selection-start-column="76" selection-end-line="77" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test.html" />
     <entry file="file://$PROJECT_DIR$/templates/Cover Template for Bootstrap.html" />
     <entry file="file://$PROJECT_DIR$/index/views.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -413,13 +397,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test.html" />
     <entry file="file://$PROJECT_DIR$/index/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -451,13 +429,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test.html" />
     <entry file="file://$PROJECT_DIR$/index/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -554,38 +526,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Dashboard Template for Bootstrap.html">
+    <entry file="file://$PROJECT_DIR$/templates/Dashboard Template for Bootstrap.html" />
+    <entry file="file://$PROJECT_DIR$/templates/test.html" />
+    <entry file="file://$PROJECT_DIR$/templates/content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="262" column="105" selection-start-line="262" selection-start-column="58" selection-end-line="262" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="77" column="76" selection-start-line="77" selection-start-column="76" selection-end-line="77" selection-end-column="76" />
+        <state relative-caret-position="473">
+          <caret line="264" column="7" lean-forward="true" selection-start-line="264" selection-start-column="7" selection-end-line="264" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/myindex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4263">
-          <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        <state relative-caret-position="473">
+          <caret line="360" column="7" lean-forward="true" selection-start-line="360" selection-start-column="7" selection-end-line="360" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="153" column="34" lean-forward="true" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="245" column="43" selection-start-line="245" selection-start-column="43" selection-end-line="245" selection-end-column="43" />
+        <state relative-caret-position="479">
+          <caret line="177" column="8" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
         </state>
       </provider>
     </entry>
